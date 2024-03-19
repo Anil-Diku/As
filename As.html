@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ås Kommune</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add any additional stylesheets or scripts here -->
+</head> 
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/Aas_kommunevaapen_2016_liggende_crop.jpg" alt="Ås Kommune Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#" id="loginBtn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to Ås Kommune</h1>
+                    <p>Providing quality services for our community</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>Services</h2>
+                <!-- Service categories here -->
+            </div>
+        </section>
+
+        <!-- Other sections for different features can be added similarly -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Contact Details</h3>
+            <p>Address: Skoleveien 1, 1430 Ås
+                Postboks 195, 1431 Ås Norway</p>
+            <p>Phone: +47 12345678</p>
+            <p>Email: info@askommune.no</p>
+            <p>Opening Hours: Monday - Friday, 9:00 AM - 4:00 PM</p>
+            <p>&copy; 2024 Ås Kommune. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login form -->
+    <div id="loginForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Script for login form -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('loginForm');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("loginBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle sign up link
+        var signUpLink = document.getElementById("signupLink");
+        signUpLink.onclick = function() {
+            // You can add functionality to handle signing up here
+            alert("Redirect to sign up page or form...");
+        }
+    </script>
+</body>
+</html>
